@@ -1,12 +1,60 @@
-# React + Vite
+# Image Cropper
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## <a name="preview">📸 Preview</a>
+![Dashboard Preview](src/assets/Preview.png)  
+<br>
 
-Currently, two official plugins are available:
+## 🎯 Live Demo  
+🔗 **[Check out the live demo here](https://image-cropper-topaz.vercel.app/)**  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## <a name="tools">🛠️ Tools</a>
 
-## Expanding the ESLint configuration
+-   [React JS](https://react.dev)
+-   [TailwindCSS](https://tailwindcss.com/)
+-   [Framer Motion](https://www.npmjs.com/package/framer-motion)
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## <a name="features">✨ Features</a>
+
+-  Drag And Drop File
+-  Crop Image
+-  Download Image
+
+
+
+## <a name="getting-started">🚀 Getting Started</a>
+
+To get started follow these steps:
+
+#### Cloning the Repository
+
+Using CLI
+
+```bash
+git clone https://github.com/smRid/Image-Cropper.git
+```
+
+**\*\*_Ensure you have installed [Git](https://git-scm.com) on your machine._**
+
+or using GitHub:
+
+-   Go to the project [repository](https://github.com/smRid/Image-Cropper.git) on my GitHub page
+-   Click on the green button on the top 👆
+-   Click Download ZIP
+
+#### Installation
+
+Install the project dependencies using npm:
+
+```bash
+npm install
+```
+
+**\*\*_Ensure you have installed [NodeJS](https://nodejs.org/en) on your machine._**
+
+#### Running the Project
+
+```bash
+npm run dev
+```
+
+**\*\*_This project uses [Vite](https://vitejs.dev)._**
