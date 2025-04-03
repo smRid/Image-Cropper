@@ -9,9 +9,7 @@ const bytesToMB = (bytes) => {
 export const useFileReader = (options) => {
     const { method, accept, maxFileSize } = options;
     const [file, setFile] = useState(null);
-    const [error, setError] = useState({ type: null, msg: null });
-    const [result, setResult] = useState(null);
-    const [progress, setProgress] = useState(0);
+    
 
     useEffect(() => {
         if (!file) return;
