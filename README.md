@@ -1,7 +1,7 @@
 # Image Cropper
 
 ## <a name="preview">📸 Preview</a>
-![Dashboard Preview](src/assets/Preview.png)  
+![Dashboard Preview](public/Preview.png)  
 <br>
 
 ## 🎯 Live Demo  
@@ -12,6 +12,8 @@
 -   [React JS](https://react.dev)
 -   [TailwindCSS](https://tailwindcss.com/)
 -   [Framer Motion](https://www.npmjs.com/package/framer-motion)
+-   [React Easy Crop](https://www.npmjs.com/package/react-easy-crop)
+-   [React Icons](https://react-icons.github.io/react-icons/)
 
 ## <a name="features">✨ Features</a>
 
