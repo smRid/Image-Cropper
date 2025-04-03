@@ -1,4 +1,4 @@
-# Image Cropper
+# Image-Cropper
 
 ## <a name="preview">📸 Preview</a>
 ![Dashboard Preview](public/Preview.png)  
