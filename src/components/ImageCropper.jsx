@@ -19,11 +19,8 @@ const ImageCropper = ({ imageSrc, file, setOpenCropper }) => {
         canvas.height = cropHeight;
 
         let image = new Image();
-        image.src = imageSrc;
-
-        ctx.drawImage(image, cropX, cropY, cropWidth, cropHeight, 0, 0, cropWidth, cropHeight);
-
         image.onload = () => {
+            ctx.drawImage(image, cropX, cropY, cropWidth, cropHeight, 0, 0, cropWidth, cropHeight);
             const dataURL = canvas.toDataURL();
             const aTag = document.createElement("a");
             aTag.href = dataURL;
@@ -32,6 +29,7 @@ const ImageCropper = ({ imageSrc, file, setOpenCropper }) => {
             aTag.click();
             aTag.remove();
         };
+        image.src = imageSrc; // Set src after onload
     };
 
     return (
