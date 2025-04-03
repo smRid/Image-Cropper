@@ -35,7 +35,7 @@ const DragZone = ({ setFile }) => {
                 Drag and drop an image file or <br />
                 <label
                     htmlFor="image-file"
-                    className="text-primary-30 underline cursor-pointer hover:text-primary-50"
+                   
                 >
                     browse to upload
                 </label>
