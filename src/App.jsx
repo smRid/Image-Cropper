@@ -1,22 +1,37 @@
-import { DropZone } from "./components";
-import  {useFileReader} from "./hooks/useFileReader";
-
+import { useEffect, useState } from "react";
+import { AnimatePresence } from "framer-motion";
+import { useFileReader } from "./hooks";
+import { DragZone, ImageCropper } from "./components";
 
 function App() {
-  const [{result, error, file,}, setFile] = useFileReader({
-    method: "readAsDataURL",
-    accept : ["image/png, image/jpg, image/jpeg"],
-    maxFileSize: 5,
-  });
+    const [openCropper, setOpenCropper] = useState(false);
+    const [{ result, error, file }, setFile] = useFileReader({
+        method: "readAsDataURL",
+        accept: ["png", "jpg", "jpeg"],
+        maxFileSize: 5,
+    });
 
-  return (
-    <>
-      <div className="relative min-h-screen flex flex-col justify-center items-center p-2 bg-white-50 font-poppins">
-        <DropZone setFile={setFile}/>
-        <img src={result} alt="" />
-      </div>
-    </>
-  )
+    useEffect(() => {
+        if (result && !error.type) setOpenCropper(true);
+        else setOpenCropper(false);
+    }, [result, error.type]);
+
+    return (
+        <div className="relative min-h-screen flex flex-col items-center justify-center p-2 bg-white-50 font-poppins">
+            <DragZone setFile={setFile} />
+            {(error.type === "fileType" || error.type === "fileSize") && <p className="text-red-500 font-medium">{error.msg}</p>}
+            <AnimatePresence>
+                {openCropper && (
+                    <ImageCropper
+                        imageSrc={result}
+                        file={file}
+                        setFile={setFile}
+                        setOpenCropper={setOpenCropper}
+                    />
+                )}
+            </AnimatePresence>
+        </div>
+    );
 }
 
-export default App
+export default App;
